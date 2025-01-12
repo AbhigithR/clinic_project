@@ -97,7 +97,7 @@
                 </div>
                 <a href="contact.html" class="nav-item nav-link">Contact</a>
             </div>
-            <button type="button" class="btn text-dark" data-bs-toggle="modal" data-bs-target="#searchModal"><i class="fa fa-search"></i></button>
+        <!---   <button type="button" class="btn text-dark" data-bs-toggle="modal" data-bs-target="#searchModal"><i class="fa fa-search"></i></button>--->
             <a href="appointment.html" class="btn btn-primary py-2 px-4 ms-3">Appointment</a>
         </div>
     </nav>
@@ -175,15 +175,39 @@
     <div class="container-fluid position-relative pt-5 wow fadeInUp" data-wow-delay="0.1s" style="z-index: 1;">
         <div class="container">
             <div class="bg-primary p-5">
-                <form class="mx-auto" style="max-width: 600px;">
+                <!-- Form -->
+                <form class="mx-auto" style="max-width: 600px;" onsubmit="showThankYouMessage(event)">
                     <div class="input-group">
-                        <input type="text" class="form-control border-white p-3" placeholder="Your Email">
-                        <button class="btn btn-dark px-4">Sign Up</button>
+                        <input type="email" id="emailInput" class="form-control border-white p-3" placeholder="Your Email" required>
+                        <button type="submit" class="btn btn-dark px-4">Sign Up</button>
                     </div>
                 </form>
+    
+                <!-- Thank You Message -->
+                <div id="thankYouMessage" class="text-white mt-4" style="display: none;">
+                    <h3>Thank you for signing up! You will get the newsletters.</h3>
+                </div>
             </div>
         </div>
     </div>
+    
+    <script>
+        // Function to display the thank you message
+        function showThankYouMessage(event) {
+            event.preventDefault(); // Prevent form submission
+    
+            // Get the email input value (optional)
+            var email = document.getElementById('emailInput').value;
+    
+            // Hide the form and show the thank you message
+            document.querySelector('form').style.display = 'none';
+            document.getElementById('thankYouMessage').style.display = 'block';
+    
+            // Optionally, log the email for confirmation (for demonstration purposes)
+            console.log('Email: ' + email);
+        }
+    </script>
+    
     <!-- Newsletter End -->
     
 

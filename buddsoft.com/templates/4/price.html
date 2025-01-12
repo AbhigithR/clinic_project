@@ -5,7 +5,7 @@
 <!-- Mirrored from buddsoft.com/templates/4/price.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 07 Jan 2025 23:33:30 GMT -->
 <head>
     <meta charset="utf-8">
-    <title>DentCare - Dental Clinic Website Template</title>
+    <title>LifeCare - Health Clinic Website Template</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="BuddSoft" name="keywords">
     <meta content="BuddSoft" name="description">
@@ -61,7 +61,7 @@
             <div class="col-md-6 text-center text-lg-end">
                 <div class="position-relative d-inline-flex align-items-center bg-primary text-white top-shape px-5">
                     <div class="me-3 pe-3 border-end py-2">
-                        <p class="m-0"><i class="fa fa-envelope-open me-2"></i>info@example.com</p>
+                        <p class="m-0"><i class="fa fa-envelope-open me-2"></i>info@lifecare.com</p>
                     </div>
                     <div class="py-2">
                         <p class="m-0"><i class="fa fa-phone-alt me-2"></i>+012 345 6789</p>
@@ -97,7 +97,7 @@
                 </div>
                 <a href="contact.html" class="nav-item nav-link">Contact</a>
             </div>
-            <button type="button" class="btn text-dark" data-bs-toggle="modal" data-bs-target="#searchModal"><i class="fa fa-search"></i></button>
+        <!---    <button type="button" class="btn text-dark" data-bs-toggle="modal" data-bs-target="#searchModal"><i class="fa fa-search"></i></button>--->
             <a href="appointment.html" class="btn btn-primary py-2 px-4 ms-3">Appointment</a>
         </div>
     </nav>
@@ -154,7 +154,7 @@
                     <div class="owl-carousel price-carousel wow zoomIn" data-wow-delay="0.9s">
                         <div class="price-item pb-4">
                             <div class="position-relative">
-                                <img class="img-fluid rounded-top" src="img/price-1.jpg" alt="">
+                                <img class="img-fluid rounded-top" src="img/blood_test.jpg.jpg" alt="">
                                 <div class="d-flex align-items-center justify-content-center bg-light rounded pt-2 px-3 position-absolute top-100 start-50 translate-middle" style="z-index: 2;">
                                     <h2 class="text-primary m-0">$35</h2>
                                 </div>
@@ -170,7 +170,7 @@
                         </div>
                         <div class="price-item pb-4">
                             <div class="position-relative">
-                                <img class="img-fluid rounded-top" src="img/price-2.jpg" alt="">
+                                <img class="img-fluid rounded-top" src="img/vaccination.jpg" alt="">
                                 <div class="d-flex align-items-center justify-content-center bg-light rounded pt-2 px-3 position-absolute top-100 start-50 translate-middle" style="z-index: 2;">
                                     <h2 class="text-primary m-0">$49</h2>
                                 </div>
@@ -212,15 +212,39 @@
     <div class="container-fluid position-relative pt-5 wow fadeInUp" data-wow-delay="0.1s" style="z-index: 1;">
         <div class="container">
             <div class="bg-primary p-5">
-                <form class="mx-auto" style="max-width: 600px;">
+                <!-- Form -->
+                <form class="mx-auto" style="max-width: 600px;" onsubmit="showThankYouMessage(event)">
                     <div class="input-group">
-                        <input type="text" class="form-control border-white p-3" placeholder="Your Email">
-                        <button class="btn btn-dark px-4">Sign Up</button>
+                        <input type="email" id="emailInput" class="form-control border-white p-3" placeholder="Your Email" required>
+                        <button type="submit" class="btn btn-dark px-4">Sign Up</button>
                     </div>
                 </form>
+    
+                <!-- Thank You Message -->
+                <div id="thankYouMessage" class="text-white mt-4" style="display: none;">
+                    <h3>Thank you for signing up! You will get the newsletters.</h3>
+                </div>
             </div>
         </div>
     </div>
+    
+    <script>
+        // Function to display the thank you message
+        function showThankYouMessage(event) {
+            event.preventDefault(); // Prevent form submission
+    
+            // Get the email input value (optional)
+            var email = document.getElementById('emailInput').value;
+    
+            // Hide the form and show the thank you message
+            document.querySelector('form').style.display = 'none';
+            document.getElementById('thankYouMessage').style.display = 'block';
+    
+            // Optionally, log the email for confirmation (for demonstration purposes)
+            console.log('Email: ' + email);
+        }
+    </script>
+    
     <!-- Newsletter End -->
     
 
