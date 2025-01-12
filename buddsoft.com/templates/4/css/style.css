@@ -323,3 +323,9 @@ h6,
     width: 120px;
     height: 120px;
 }
+
+.bg-offer {
+    background-image: url('img/carousel-1 old.jpg');
+    background-size: cover;
+    background-position: center;
+}
