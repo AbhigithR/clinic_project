@@ -329,3 +329,19 @@ h6,
     background-size: cover;
     background-position: center;
 }
+.whatsapp-icon {
+    position: fixed;
+    bottom: 20px;
+    left: 20px; /* Changed from right to left */
+    background-color: #25d366;
+    color: white;
+    padding: 15px;
+    border-radius: 50%;
+    font-size: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    text-decoration: none;
+}
+
+.whatsapp-icon:hover {
+    background-color: #128C7E;
+}
