@@ -337,12 +337,12 @@ h6,
     background-color: #25d366;
     color: white;
     border-radius: 50%;
-    width: 70px;
-    height: 70px;
+    width: 58px;
+    height: 58px;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 40px;
+    font-size: 28px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
     z-index: 1000;
     transition: all 0.3s ease-in-out;
